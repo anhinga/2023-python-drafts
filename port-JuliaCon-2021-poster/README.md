@@ -54,7 +54,7 @@ Ah, OK, this mystery has a very simple solution: obtained monochrome versions of
 somewhat different between Julia and Python.
 
 This is less mysterious (so they have a slightly different conversions from color to monochrome for some
-reason, that's not implausible; TODO: look at their respective source code and see what's different).
+reason, that's not implausible).
 
 I did verify that color images are the same. 
 
@@ -69,3 +69,9 @@ and the mystery will go away.
 
 And, indeed, color.rgb2gray coefficients are not quite Rec. 709, but they are very close to that:
 https://scikit-image.org/docs/stable/auto_examples/color_exposure/plot_rgb_to_gray.html
+
+Yes, Python formula is exactly `Y = 0.2125 R + 0.7154 G + 0.0721 B`:
+
+https://github.com/scikit-image/scikit-image/blob/main/skimage/color/colorconv.py
+
+(TODO: I am still looking for where the Julia code computing Rec. 601 is located.)

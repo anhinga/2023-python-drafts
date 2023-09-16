@@ -29,3 +29,14 @@ def norm_rows(f, x):
 I asked GPT-4 to clarify the difference here:
 
 https://chat.openai.com/share/d01e5b68-f1f5-403a-9976-1203ad4cd65c
+
+---
+
+I am going to introduce a new function for saving and displaying monochrome images:
+
+```python
+def save_show(monochrome_image, file_name):
+    monochrome_image_uint8 = (monochrome_image * 255).astype(np.uint8)
+    cv2.imwrite(file_name, monochrome_image_uint8)
+    display(Image(filename=file_name))
+```

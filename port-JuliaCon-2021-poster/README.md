@@ -79,3 +79,7 @@ Meanwhile, Julia code uses exactly Rec. 601, `0.299f0*red(x) + 0.587f0*green(x) 
 https://github.com/JuliaGraphics/Colors.jl/blob/master/src/conversions.jl
 
 **Conclusion:**: one can play with these coefficients if one feels like it.
+
+---
+
+[python-with-julia-monochrome.ipynb](python-with-julia-monochrome.ipynb) - reproduce Julia way of converting color to monochrome

@@ -77,3 +77,5 @@ https://github.com/scikit-image/scikit-image/blob/main/skimage/color/colorconv.p
 Meanwhile, Julia code uses exactly Rec. 601, `0.299f0*red(x) + 0.587f0*green(x) + 0.114f0*blue(x)`, see the end of
 
 https://github.com/JuliaGraphics/Colors.jl/blob/master/src/conversions.jl
+
+**Conclusion:**: one can play with these coefficients if one feels like it.

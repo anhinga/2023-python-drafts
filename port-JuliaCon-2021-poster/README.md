@@ -40,3 +40,10 @@ def save_show(monochrome_image, file_name):
     cv2.imwrite(file_name, monochrome_image_uint8)
     display(Image(filename=file_name))
 ```
+
+[first-followup.ipynb](first-followup.ipynb) - a small clean notebook incorporating these changes and
+investigating whether differences between Julia and Python are due to float32 and float64 difference.
+
+In that sense, it turns out that float32 and float64 are indistinguishable, we still need to figure out
+why matrix multiplication followed by `normalize_image` produces slightly different results
+in Julia and in Python (TODO: investigate further).

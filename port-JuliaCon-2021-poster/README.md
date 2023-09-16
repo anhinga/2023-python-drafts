@@ -67,4 +67,5 @@ and references https://en.wikipedia.org/wiki/Luma_%28video%29#Rec._601_luma_vers
 So we just need to establish that `color.rgb2gray` in `skimage` uses the Rec. 709,
 and the mystery will go away.
 
-
+And, indeed, color.rgb2gray coefficients are not quite Rec. 709, but they are very close to that:
+https://scikit-image.org/docs/stable/auto_examples/color_exposure/plot_rgb_to_gray.html

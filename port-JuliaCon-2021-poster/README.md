@@ -57,3 +57,14 @@ This is less mysterious (so they have a slightly different conversions from colo
 reason, that's not implausible; TODO: look at their respective source code and see what's different).
 
 I did verify that color images are the same. 
+
+Julia documentation https://juliaimages.org/latest/function_reference/#Color-conversion says that
+
+> `Gray` calculates a grayscale representation of a color image using the Rec 601 luma
+
+and references https://en.wikipedia.org/wiki/Luma_%28video%29#Rec._601_luma_versus_Rec._709_luma_coefficients
+
+So we just need to establish that `color.rgb2gray` in `skimage` uses the Rec. 709,
+and the mystery will go away.
+
+

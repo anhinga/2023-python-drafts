@@ -1,6 +1,6 @@
 ## Porting JuliaCon 2021 poster from Julia to Python
 
-[images-as-matrices.ipynb](images-as-matrices.ipynb) - reproducing main matrix multiplication effects modulo some relatively mild differences probably due to suspected precision differences (TODO: investigate further)
+[images-as-matrices.ipynb](images-as-matrices.ipynb) - reproducing main matrix multiplication effects modulo some relatively mild differences probably due to suspected precision differences
 
 Thanks to GPT-4 help while doing this:
 
@@ -46,4 +46,14 @@ investigating whether differences between Julia and Python are due to float32 an
 
 In that sense, it turns out that float32 and float64 are indistinguishable, we still need to figure out
 why matrix multiplication followed by `normalize_image` produces slightly different results
-in Julia and in Python (TODO: investigate further).
+in Julia and in Python.
+
+---
+
+Ah, OK, this mystery has a very simple solution: obtained monochrome versions of `mandrill` are
+somewhat different between Julia and Python.
+
+This is less mysterious (so they have a slightly different conversions from color to monochrome for some
+reason, that's not implausible; TODO: look at their respective source code and see what's different).
+
+I did verify that color images are the same. 

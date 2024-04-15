@@ -83,3 +83,7 @@ https://github.com/JuliaGraphics/Colors.jl/blob/master/src/conversions.jl
 ---
 
 [python-with-julia-monochrome.ipynb](python-with-julia-monochrome.ipynb) - reproduce Julia way of converting color to monochrome
+
+---
+
+This was continued by a collaborative effort here: https://github.com/Chernobilsky/Mishka-project
